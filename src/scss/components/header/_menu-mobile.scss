@@ -1,0 +1,5 @@
+.menu-mobile {
+  @include media-sm {
+    display: none;
+  }
+}

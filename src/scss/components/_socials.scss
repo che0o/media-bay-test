@@ -1,0 +1,16 @@
+.socials {
+  @include flex($cg: 10px);
+
+  &__link {
+    svg {
+      fill: var(--dark-color);
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:hover {
+      svg {
+        fill: var(--hover-color);
+      }
+    }
+  }
+}

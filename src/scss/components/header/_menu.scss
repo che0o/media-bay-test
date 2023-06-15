@@ -1,0 +1,24 @@
+.menu {
+  display: none;
+
+  @include media-md {
+    display: block;
+  }
+
+  &__list {
+    @include flex($cg: 30px);
+  }
+
+  &__link {
+    @include font(
+      $ff: "Arsenal",
+      $fw: 400,
+      $fs: 16px,
+      $lh: 1.3,
+      $c: var(--dark-color)
+    );
+    text-transform: uppercase;
+    width: 20px;
+    height: 20px;
+  }
+}
