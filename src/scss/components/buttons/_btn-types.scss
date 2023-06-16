@@ -1,0 +1,38 @@
+.btn {
+  &--dark {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+
+    &:not([disabled]):hover {
+      opacity: 0.8;
+    }
+
+    &:not([disabled]):active {
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      background: transparent;
+      // color: $c-gray;
+    }
+  }
+
+  // &--blue {
+  //   background: $c-blue;
+  //   color: var(--light-color);
+  //   border: 1px solid var(--light-color);
+
+  //   &:not([disabled]):hover {
+  //     background: $c-hover-blue;
+  //   }
+
+  //   &:not([disabled]):active {
+  //     background: $c-active-blue;
+  //   }
+
+  //   &:disabled {
+  //     background: rgba($c-gray, 10%);
+  //     color: $c-gray;
+  //   }
+  // }
+}

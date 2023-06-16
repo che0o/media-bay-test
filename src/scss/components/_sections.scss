@@ -1,4 +1,9 @@
-.sections {
+.section {
   padding-top: 75px;
   padding-bottom: 75px;
+
+  &__title {
+    @include font($ff: "Arsenal", $fw: 400, $fs: 40px, $lh: 1.2);
+    margin-bottom: 70px;
+  }
 }

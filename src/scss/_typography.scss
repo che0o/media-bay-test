@@ -1,0 +1,44 @@
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+// a {
+//   text-decoration: none;
+// }
+
+// ul {
+//   list-style: none;
+//   padding-left: 0;
+//   margin: 0;
+// }
+
+// ul:not([class]) {
+//   li {
+//     position: relative;
+//     padding-left: 24.94px;
+
+//     &:not(:last-child) {
+//       margin-bottom: 5px;
+//     }
+
+//     &::before {
+//       content: "";
+//       width: 4.94px;
+//       height: 1.51px;
+//       background-color: var(--dark-color);
+//       @include absolute($t: 50%, $l: 10px);
+//     }
+//   }
+
+//   span {
+//     @include font($fw: 400, $fs: 20px, $lh: 24px, $c: var(--dark-color));
+//   }
+// }
+
+// span {
+//   @include font($fw: 700, $fs: 20px, $lh: 24px, $c: var(--dark-color));
+//   margin-bottom: 10px;
+// }

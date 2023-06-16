@@ -2,14 +2,13 @@
 :root {
   // base
   --font-family: "Source Sans Pro", sans-serif;
-  // --content-width: 1170px;
-  // --container-offset: 15px;
-  // --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --light-color: #fff;
   --dark-color: #33342f;
+  --secondary-color: #92866c;
   --hover-color: #396e8b;
+  --dark-opacity-color: rgba(51, 52, 47, 0.5);
 }
 
 // MEDIA

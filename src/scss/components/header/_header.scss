@@ -1,8 +1,10 @@
 .header {
   @include fixed($t: 0, $r: 0, $l: 0);
   @include flex($jc: space-between);
+  background-color: var(--light-color);
   padding-top: 20px;
   padding-bottom: 20px;
+  z-index: 5;
   transition: padding 0.3s ease-in-out;
 
   &__logo-link {

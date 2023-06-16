@@ -1,0 +1,72 @@
+<section class="section container">
+  <h2 class="section__title">Обратная связь</h2>
+  <form action="" class="feedback-form form" id="feedback-form">
+    <input type="hidden" name="form-name" />
+    <fieldset class="form-fieldset form__fieldset">
+      <legend class="form-legend form__legend">Имя</legend>
+      <label class="form-label form__label">
+        <input
+          type="text"
+          name="name"
+          class="form-input form__input"
+          placeholder="как к вам обращаться"
+          required=""
+          pattern=""
+        />
+      </label>
+    </fieldset>
+    <fieldset class="form-fieldset form__fieldset">
+      <legend class="form-legend form__legend">Телефон</legend>
+      <label class="form-label form__label">
+        <input
+          type="tel"
+          name="tel"
+          class="form-input form__input"
+          placeholder="ваш контактный номер телефона"
+          required=""
+        />
+      </label>
+    </fieldset>
+    <fieldset class="form-fieldset form__fieldset">
+      <legend class="form-legend form__legend">Почта</legend>
+      <label class="form-label form__label">
+        <input
+          type="email"
+          name="email"
+          class="form-input form__input"
+          placeholder="адрес  вашей электронной почты"
+          pattern=""
+        />
+      </label>
+    </fieldset>
+    <fieldset class="form-fieldset form__fieldset">
+      <legend class="form-legend form__legend">Сообщение</legend>
+      <textarea
+        name="description"
+        class="form-textarea feedback-form__textarea"
+        placeholder="расскажите о вашем проекте"
+        rows="1"
+      ></textarea>
+      <label class="form-uploadfile feedback-form__uploadfile">
+        <input
+          type="file"
+          name="file[]"
+          multiple=""
+          data-max-files="5"
+          class="form-uploadfile-input"
+        />
+        <span class="icon-plus"></span>
+        <span class="form-uploadfile-text">Прикрепить файл</span>
+      </label>
+    </fieldset>
+    <fieldset class="form-fieldset form-bottom">
+      <label class="form-policy">
+        <span class="form-policy__text"
+          >Заполняя форму, вы соглашаетесь на обработку персональных
+          данных</span
+        >
+      </label>
+      <button name="send" class="btn btn--dark btn--sm">Отправить</button>
+    </fieldset>
+  </form>
+</section>

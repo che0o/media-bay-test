@@ -1,3 +1,53 @@
 .index-hero {
+  @include flex($ai: flex-start);
   padding-top: 80px;
+
+  &__title {
+    @include font($ff: "Arsenal", $fw: 400, $fs: 40px, $lh: 1.2);
+    text-transform: uppercase;
+    min-width: 380px;
+    padding-top: 95px;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    opacity: 0.5;
+    margin-bottom: 69px;
+  }
+
+  &__slider {
+    width: 833px;
+  }
+
+  &__right {
+    height: 647px;
+    max-width: 833px;
+  }
+
+  &-slide {
+    height: 397px;
+    transition: height 0.2s ease-in-out;
+
+    &.swiper-slide-active {
+      height: 647px;
+      margin-right: 11px;
+    }
+
+    &.swiper-slide-next {
+      padding-top: 60px;
+      margin-left: 11px;
+      transition: padding 0.3s ease-in-out;
+    }
+  }
+
+  &__swiper-wrapper {
+    height: 647px;
+  }
 }
+
+// .swiper-container {
+//   width: 100%;
+// }
