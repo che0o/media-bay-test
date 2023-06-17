@@ -1,50 +1,214 @@
 .index-hero {
-  @include flex($ai: flex-start);
-  padding-top: 80px;
+  @include flex($fd: column, $ai: flex-start);
+  padding-top: 25px;
+
+  @include media-md {
+    flex-direction: row;
+  }
+
+  @include media-lg {
+    padding-top: 80px;
+  }
 
   &__title {
-    @include font($ff: "Arsenal", $fw: 400, $fs: 40px, $lh: 1.2);
+    @include font($ff: "Arsenal", $fw: 400, $fs: 24px, $lh: 1.25);
     text-transform: uppercase;
-    min-width: 380px;
-    padding-top: 95px;
-    margin-bottom: 15px;
+    min-width: 280px;
+    margin-bottom: 10px;
+
+    @include media-sm {
+      font-size: 32px;
+      line-height: 1.2;
+      min-width: 445px;
+      margin-bottom: 20px;
+    }
+
+    @include media-md {
+      font-size: 36px;
+      margin-bottom: 15px;
+      min-width: 348px;
+      padding-top: 85px;
+    }
+
+    @include media-lg {
+      font-size: 40px;
+      min-width: 380px;
+      padding-top: 95px;
+    }
   }
 
   &__description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
+    @include font($fw: 400, $fs: 14px, $lh: 1.5);
+    margin-bottom: 40px;
     opacity: 0.5;
-    margin-bottom: 69px;
+
+    @include media-sm {
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 45px;
+    }
+
+    @include media-md {
+      margin-bottom: 60px;
+    }
+
+    @include media-lg {
+      margin-bottom: 69px;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @include media-md {
+      display: inline-flex;
+    }
+
+    &-bottom {
+      @include media-md {
+        display: none;
+      }
+    }
   }
 
   &__slider {
-    width: 833px;
+    // width: 833px;
+    padding-bottom: 25px;
+
+    @include media-sm {
+      padding-bottom: 59px;
+    }
+
+    @include media-md {
+      padding-bottom: 0;
+    }
   }
 
   &__right {
-    height: 647px;
-    max-width: 833px;
+    max-width: 420px;
+    // height: 647px;
+    @include media-xs {
+      max-width: 648px;
+    }
+
+    // @include media-sm {
+
+    // }
+
+    @include media-md {
+      max-width: 668px;
+    }
+
+    @include media-lg {
+      max-width: 833px;
+    }
   }
 
   &-slide {
-    height: 397px;
     transition: height 0.2s ease-in-out;
 
+    &__img {
+      height: 303px;
+      margin-bottom: 10px;
+
+      @include media-sm {
+        height: 467px;
+      }
+
+      @include media-md {
+        height: 412px;
+      }
+
+      @include media-lg {
+        height: 600px;
+        margin-bottom: 25px;
+      }
+    }
+
     &.swiper-slide-active {
-      height: 647px;
-      margin-right: 11px;
+      height: 335px;
+      // max-width: 205px;
+
+      @include media-sm {
+        height: 505px;
+        // max-width: 314px;
+      }
+
+      @include media-md {
+        height: 448px;
+        // max-width: 279px;
+      }
+
+      @include media-lg {
+        height: 647px;
+        // max-width: 406px;
+        margin-right: 11px;
+      }
     }
 
     &.swiper-slide-next {
+      height: 154px;
       padding-top: 60px;
       margin-left: 11px;
       transition: padding 0.3s ease-in-out;
+
+      .slider__desc {
+        display: none;
+
+        @include media-sm {
+          display: block;
+        }
+      }
+
+      .index-hero-slide__img {
+        height: 154px;
+        margin-bottom: 10px;
+
+        @include media-sm {
+          height: 272px;
+        }
+
+        @include media-md {
+          height: 240px;
+        }
+
+        @include media-lg {
+          height: 350px;
+          margin-bottom: 25px;
+        }
+      }
+
+      @include media-sm {
+        height: 310px;
+        // max-width: 314px;
+      }
+
+      @include media-md {
+        height: 276px;
+        // max-width: 278px;
+      }
+
+      @include media-lg {
+        height: 397px;
+        // max-width: 406px;
+      }
     }
   }
 
   &__swiper-wrapper {
-    height: 647px;
+    height: 335px;
+
+    @include media-sm {
+      height: 505px;
+    }
+
+    @include media-md {
+      height: 448px;
+    }
+
+    @include media-lg {
+      height: 647px;
+    }
   }
 }
 

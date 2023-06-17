@@ -6,12 +6,6 @@
 @import "typography";
 
 // подключения компонентов страницы
-@import "./components/socials";
-@import "./components/sections";
-@import "./components/index-hero";
-@import "./components/index-cases";
-@import "./components/products";
-
 //Header
 @import "./components/header/header";
 @import "./components/header/menu-mobile";
@@ -29,3 +23,14 @@
 @import "./components/buttons/btn";
 @import "./components/buttons/btn-types";
 @import "./components/buttons/btn-sizes";
+
+//Form
+@import "./components/form/form";
+
+//Blocks
+@import "./components/socials";
+@import "./components/sections";
+@import "./components/index-hero";
+@import "./components/index-cases";
+@import "./components/products";
+@import "./components/index-feedback";

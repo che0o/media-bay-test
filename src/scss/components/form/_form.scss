@@ -1,0 +1,77 @@
+.form {
+  @include flex($fw: wrap);
+  max-width: 833px;
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--dark-opacity-color);
+    }
+
+    &:last-child {
+      padding-top: 12px;
+    }
+
+    &--message {
+      width: 84%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
+  }
+
+  &__input-text {
+    text-transform: uppercase;
+    line-height: 23px;
+    min-width: 240px;
+  }
+
+  &-uploadfile {
+    width: 16%;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      padding-bottom: 19px;
+    }
+
+    &-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-text,
+    svg {
+      transition: color 0.3s ease-in-out;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      .form-uploadfile-text,
+      svg {
+        color: var(--hover-color);
+      }
+    }
+  }
+
+  &-policy__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    opacity: 0.7;
+  }
+}

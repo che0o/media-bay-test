@@ -1,10 +1,19 @@
 .products {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include media-md {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   &__list {
-    width: 47.5%;
+    width: 100%;
+
+    @include media-md {
+      width: 47.5%;
+    }
   }
 
   &__item {

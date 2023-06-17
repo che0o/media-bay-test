@@ -5,6 +5,7 @@ Swiper.use(Navigation, Scrollbar);
 const swiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 2,
+  speed: 500,
   navigation: {
     nextEl: ".slider-button-next",
   },
