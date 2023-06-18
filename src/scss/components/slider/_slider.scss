@@ -52,5 +52,23 @@
         fill: var(--dark-color);
       }
     }
+
+    @include media-md {
+      height: 45px;
+      width: 45px;
+
+      svg {
+        width: 13.85px;
+      }
+    }
+
+    @include media-lg {
+      height: 65px;
+      width: 65px;
+
+      svg {
+        width: 20px;
+      }
+    }
   }
 }

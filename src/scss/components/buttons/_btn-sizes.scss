@@ -1,8 +1,12 @@
 .btn {
   &--sm {
     height: 43px;
-    min-width: 183px;
+    min-width: 230px;
     padding: 15px 27px;
+
+    @include media-md {
+      min-width: 179px;
+    }
   }
 
   &--wide {
