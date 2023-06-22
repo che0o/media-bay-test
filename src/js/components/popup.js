@@ -12,12 +12,14 @@ class Popup {
     this.buttonCloseModal = document.querySelectorAll(
       this.settings.closeButtons
     );
+    this.currentScroll;
     this.openPopup();
     this.closePopup();
   }
 
   openPopup() {
     const hendlerOpenPopup = (e) => {
+      this.currentScroll = window.pageYOffset;
       document.body.classList.add("dis-scroll");
 
       this.popup.forEach((item) => {
@@ -34,14 +36,18 @@ class Popup {
 
   closePopup() {
     this.buttonCloseModal.forEach((btn) => {
-      const hendlerClosePopup = () => {
+      const hendlerClosePopup = (e) => {
+        if (e && e.type === "keyup" && e.key !== "Escape") return;
+
         document.body.classList.remove("dis-scroll");
+        window.scrollTo(0, this.currentScroll);
 
         this.popup.forEach((item) => {
           item.classList.remove(this.settings.popupShowClass);
         });
       };
 
+      window.addEventListener("keyup", hendlerClosePopup);
       btn.addEventListener("click", hendlerClosePopup);
     });
   }
