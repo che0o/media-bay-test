@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Scrollbar, Pagination } from "swiper";
 
-Swiper.use(Navigation);
+Swiper.use([Navigation, Scrollbar, Pagination]);
 
 const swiper = new Swiper(".swiper", {
   loop: true,
@@ -10,8 +10,6 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".slider-button-next",
   },
 });
-
-Swiper.use(Scrollbar);
 
 const cases = new Swiper(".cases", {
   scrollbar: {
@@ -35,8 +33,7 @@ const cases = new Swiper(".cases", {
   },
 });
 
-Swiper.use(Pagination);
-
+// setTimeout(function () {
 const caseSlider = new Swiper(".case__slider", {
   slidesPerView: 1,
   navigation: {
@@ -50,5 +47,11 @@ const caseSlider = new Swiper(".case__slider", {
     bulletClass: "case-pagination-bullet",
     bulletActiveClass: "case-pagination-bullet-active",
     clickable: true,
+    // renderPa: function (index, className) {
+    //   console.log(className);
+    //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+    // },
   },
 });
+// caseSlider.pagination.render();
+// }, 1000);

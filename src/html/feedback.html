@@ -3,17 +3,20 @@
   <p class="index-feedback__description">
     Вы можете задать вопрос, заказать выезд менеджера или получить консультацию.
   </p>
-  <form action="" class="feedback-form form" id="feedback-form">
-    <input type="hidden" name="form-name" />
+  <form
+    action="mail.php"
+    enctype="multipart/form-data"
+    class="feedback-form form"
+    id="feedback-form"
+  >
+    <input type="hidden" name="admin_email[]" value="karim13.91@mail.ru" />
     <label class="form-label form__label">
       <span class="form__input-text">Имя</span>
       <input
         type="text"
         name="name"
-        class="form-input form__input"
+        class="form-input form__input input-name"
         placeholder="как к вам обращаться"
-        required=""
-        pattern=""
       />
     </label>
     <label class="form-label form__label">
@@ -21,9 +24,8 @@
       <input
         type="tel"
         name="tel"
-        class="form-input form__input"
+        class="form-input form__input input-tel"
         placeholder="ваш контактный номер телефона"
-        required=""
       />
     </label>
     <label class="form-label form__label">

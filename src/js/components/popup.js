@@ -18,6 +18,8 @@ class Popup {
 
   openPopup() {
     const hendlerOpenPopup = (e) => {
+      document.body.classList.add("dis-scroll");
+
       this.popup.forEach((item) => {
         if (item.id === e.target.id) {
           item.classList.add(this.settings.popupShowClass);
@@ -33,6 +35,8 @@ class Popup {
   closePopup() {
     this.buttonCloseModal.forEach((btn) => {
       const hendlerClosePopup = () => {
+        document.body.classList.remove("dis-scroll");
+
         this.popup.forEach((item) => {
           item.classList.remove(this.settings.popupShowClass);
         });

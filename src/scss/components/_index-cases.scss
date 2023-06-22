@@ -108,4 +108,24 @@
     border-radius: 50%;
     cursor: pointer;
   }
+
+  &-wrapper {
+    padding-right: 20px;
+
+    @include media-xs {
+      padding-right: calc(50vw - 268px);
+    }
+
+    @include media-sm {
+      padding-right: calc(50vw - 324px);
+    }
+
+    @include media-md {
+      padding-right: calc(50vw - 480px);
+    }
+
+    @include media-lg {
+      padding-right: calc(50vw - 630px);
+    }
+  }
 }
