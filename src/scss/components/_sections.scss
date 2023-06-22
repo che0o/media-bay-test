@@ -19,6 +19,7 @@
 
   &__title {
     @include font($ff: "Arsenal", $fw: 400, $fs: 24px, $lh: 1.25);
+    text-transform: uppercase;
     margin-bottom: 40px;
     width: 100%;
 
