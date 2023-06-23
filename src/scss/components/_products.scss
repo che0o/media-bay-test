@@ -25,7 +25,13 @@
     position: relative;
     cursor: pointer;
 
-    &:last-child {
+    @include media-md {
+      &:last-child {
+        border-bottom: 1px solid var(--dark-opacity-color);
+      }
+    }
+
+    &--bottom {
       border-bottom: 1px solid var(--dark-opacity-color);
     }
 
